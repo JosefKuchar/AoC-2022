@@ -15,8 +15,8 @@ pub fn solve(input: &str, checker: &dyn Fn(u32, u32, u32, u32) -> bool) -> Optio
             .lines()
             .filter(|line| {
                 let mut nums = line
-                    .split(',')
-                    .flat_map(|group| group.split('-').map(|str| str.parse::<u32>().unwrap_or(0)));
+                    .split([',', '-'])
+                    .map(|str| str.parse::<u32>().unwrap_or(0));
                 let a1 = nums.next().unwrap();
                 let a2 = nums.next().unwrap();
                 let b1 = nums.next().unwrap();
