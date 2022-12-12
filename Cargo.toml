@@ -8,3 +8,4 @@ default-run = "aoc"
 
 [dependencies]
 pico-args = "0.5.0"
+pathfinding = "4.0.0"
